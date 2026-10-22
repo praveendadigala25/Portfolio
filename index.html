@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dadigala Praveen | Cyber Security Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #0b1120;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #00d9ff !important;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            margin-left: 15px;
+        }
+
+        .navbar .nav-link:hover {
+            color: #00d9ff !important;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #07111f,
+                #102a43,
+                #001f3f
+            );
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            color: #00d9ff;
+        }
+
+        .hero h3 {
+            color: #b8c7d9;
+        }
+
+        .hero p {
+            color: #d4dce5;
+            max-width: 700px;
+        }
+
+        .profile-icon {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            background: #00d9ff;
+            color: #07111f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            margin: auto;
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.5);
+        }
+
+        .btn-primary {
+            background: #00a8cc;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #008baa;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-weight: bold;
+        }
+
+        .section-title span {
+            color: #00a8cc;
+        }
+
+        /* About */
+        .about-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        /* Skills */
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            height: 100%;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .skill-card i {
+            font-size: 40px;
+            color: #00a8cc;
+            margin-bottom: 15px;
+        }
+
+        /* Education */
+        .timeline {
+            border-left: 3px solid #00a8cc;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -42px;
+            top: 30px;
+            width: 18px;
+            height: 18px;
+            background: #00a8cc;
+            border-radius: 50%;
+            border: 4px solid #f8f9fa;
+        }
+
+        /* Projects */
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-header {
+            background: #0b1120;
+            color: white;
+            padding: 25px;
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        /* Certifications */
+        .certificate {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .certificate i {
+            color: #00a8cc;
+            font-size: 30px;
+        }
+
+        /* Achievements */
+        .achievement {
+            text-align: center;
+            background: #0b1120;
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .achievement h2 {
+            color: #00d9ff;
+            font-weight: bold;
+        }
+
+        /* Contact */
+        .contact-card {
+            background: #0b1120;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .contact-card a {
+            color: #00d9ff;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #050914;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Scroll button */
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 99;
+            border: none;
+            background: #00a8cc;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding: 100px 0 50px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .profile-icon {
+                width: 180px;
+                height: 180px;
+                font-size: 75px;
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            Praveen
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#certifications">
+                        Certifications
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <h3>Hello, I'm</h3>
+
+                <h1>
+                    Dadigala <span>Praveen</span>
+                </h1>
+
+                <h3>Cyber Security Student & Developer</h3>
+
+                <p class="lead mt-3">
+                    Motivated Cyber Security student with hands-on experience
+                    in Python, SQL and Java. Passionate about identifying
+                    vulnerabilities and protecting digital systems.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="#projects"
+                       class="btn btn-primary btn-lg me-2">
+                        View Projects
+                    </a>
+
+                    <a href="#contact"
+                       class="btn btn-outline-light btn-lg">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="profile-icon">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About <span>Me</span></h2>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <div class="about-card">
+
+                    <p>
+                        I am a B.Tech Cyber Security student at Narsimha
+                        Reddy Engineering College, Hyderabad. I have a strong
+                        foundation in network security, Linux, basic cloud
+                        security, Data Structures and Operating Systems.
+                    </p>
+
+                    <p>
+                        I enjoy solving programming problems, developing
+                        applications and learning new technologies related
+                        to cybersecurity and software development.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+                            <strong>Email:</strong><br>
+                            praveendadigala25@gmail.com
+                        </div>
+
+                        <div class="col-md-6">
+                            <strong>Phone:</strong><br>
+                            6301294700
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="bg-light">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Technical <span>Skills</span></h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-code-slash"></i>
+
+                    <h4>Programming</h4>
+
+                    <p>
+                        Python<br>
+                        C<br>
+                        Java
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-globe"></i>
+
+                    <h4>Web Technologies</h4>
+
+                    <p>
+                        HTML<br>
+                        CSS
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-database"></i>
+
+                    <h4>Database & Tools</h4>
+
+                    <p>
+                        MySQL<br>
+                        GitHub
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-diagram-3"></i>
+
+                    <h4>Core Subjects</h4>
+
+                    <p>
+                        Data Structures<br>
+                        Operating Systems<br>
+                        Computer Networks
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <h4>Cyber Security</h4>
+
+                    <p>
+                        Network Security<br>
+                        Linux<br>
+                        Basic Cloud Security
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-terminal"></i>
+
+                    <h4>Operating Systems</h4>
+
+                    <p>
+                        Linux<br>
+                        Windows
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Education</span></h2>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h4>B.Tech in Cyber Security</h4>
+
+                <h6 class="text-primary">
+                    Narsimha Reddy Engineering College, Hyderabad
+                </h6>
+
+                <p>2023 – 2027</p>
+
+                <strong>CGPA: 7.57 / 10</strong>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h4>Intermediate (MPC)</h4>
+
+                <h6 class="text-primary">
+                    Krishnaveni Junior College, Kothagudem
+                </h6>
+
+                <p>2020 – 2022</p>
+
+                <strong>Score: 627 / 1000</strong>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h4>Secondary School</h4>
+
+                <h6 class="text-primary">
+                    Z.P.H. School, Annapureddipalli
+                </h6>
+
+                <p>2019 – 2020</p>
+
+                <strong>GPA: 9.0 / 10</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="bg-light">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Projects</span></h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Project 1 -->
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-header">
+
+                        <h4>
+                            <i class="bi bi-database me-2"></i>
+                            LRU Cache Implementation
+                        </h4>
+
+                        <small>
+                            Python | HashMap | Doubly Linked List
+                        </small>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <p>
+                            Designed a console-based LRU Cache with
+                            O(1) get and put operations.
+                        </p>
+
+                        <p>
+                            Used HashMap and a custom doubly linked list
+                            to manage eviction logic.
+                        </p>
+
+                        <span class="badge bg-primary">
+                            Python
+                        </span>
+
+                        <span class="badge bg-dark">
+                            Data Structures
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-header">
+
+                        <h4>
+                            <i class="bi bi-calendar-event me-2"></i>
+                            Party Management System
+                        </h4>
+
+                        <small>
+                            React | FastAPI | PostgreSQL
+                        </small>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <p>
+                            Developed a full-stack application for
+                            managing client data with CRUD operations.
+                        </p>
+
+                        <p>
+                            Implemented gender-based filtering and
+                            age-group categorization.
+                        </p>
+
+                        <p>
+                            Integrated FastAPI backend with PostgreSQL
+                            for data storage.
+                        </p>
+
+                        <span class="badge bg-primary">
+                            React
+                        </span>
+
+                        <span class="badge bg-success">
+                            FastAPI
+                        </span>
+
+                        <span class="badge bg-dark">
+                            PostgreSQL
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Certifications</span></h2>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="certificate">
+
+                    <i class="bi bi-award"></i>
+
+                    <h5 class="mt-3">
+                        CYBER SHIELD 101
+                    </h5>
+
+                    <p>
+                        Participation Certificate
+                    </p>
+
+                    <small>
+                        July 2025
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="certificate">
+
+                    <i class="bi bi-award"></i>
+
+                    <h5 class="mt-3">
+                        Programming in Java
+                    </h5>
+
+                    <p>
+                        NPTEL – IIT Kharagpur
+                    </p>
+
+                    <small>
+                        Jul – Oct 2025
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="certificate">
+
+                    <i class="bi bi-award"></i>
+
+                    <h5 class="mt-3">
+                        Java Full Stack Developer
+                    </h5>
+
+                    <p>
+                        EduSkills Virtual Internship
+                    </p>
+
+                    <small>
+                        Oct – Dec 2025
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section class="bg-light">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Achievements</span></h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="achievement">
+
+                    <h2>1000+</h2>
+
+                    <h5>LeetCode Problems</h5>
+
+                    <p>
+                        Solved 1000+ LeetCode problems and achieved
+                        a top-percentile global ranking.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="achievement">
+
+                    <h2>70+</h2>
+
+                    <h5>LeetCode Contests</h5>
+
+                    <p>
+                        Participated in 70+ LeetCode contests,
+                        demonstrating consistent algorithmic practice.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOFT SKILLS ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Soft <span>Skills</span></h2>
+
+        </div>
+
+        <div class="text-center">
+
+            <span class="badge bg-dark p-3 m-2">
+                Problem Solving
+            </span>
+
+            <span class="badge bg-primary p-3 m-2">
+                Communication
+            </span>
+
+            <span class="badge bg-success p-3 m-2">
+                Quick Learner
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact <span>Me</span></h2>
+
+        </div>
+
+        <div class="contact-card text-center">
+
+            <h3>Let's Connect</h3>
+
+            <p class="mt-3">
+                I'm interested in opportunities related to
+                Cyber Security and Software Development.
+            </p>
+
+            <div class="mt-4">
+
+                <p>
+                    <i class="bi bi-envelope"></i>
+                    <a href="mailto:praveendadigala25@gmail.com">
+                        praveendadigala25@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone"></i>
+                    6301294700
+                </p>
+
+            </div>
+
+            <div class="mt-4">
+
+                <a href="#" class="btn btn-primary me-2">
+                    <i class="bi bi-linkedin"></i>
+                    LinkedIn
+                </a>
+
+                <a href="#" class="btn btn-outline-light">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p class="mb-0">
+        © <span id="year"></span> Dadigala Praveen |
+        Cyber Security Student
+    </p>
+
+</footer>
+
+
+<!-- Scroll To Top -->
+
+<button id="topBtn" onclick="scrollToTop()">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JavaScript -->
+
+<script>
+
+    // Dynamic year
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    // Scroll to top button
+    window.onscroll = function () {
+
+        let button = document.getElementById("topBtn");
+
+        if (document.documentElement.scrollTop > 300) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+
+    };
+
+
+    function scrollToTop() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // Navbar active link
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 120;
+
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+
+        });
+
+    });
+
+
+    // Close mobile navbar after clicking
+    document.querySelectorAll(".nav-link").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            const navbar =
+                document.querySelector(".navbar-collapse");
+
+            if (navbar.classList.contains("show")) {
+
+                new bootstrap.Collapse(navbar).hide();
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
